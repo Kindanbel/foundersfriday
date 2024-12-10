@@ -3,6 +3,7 @@ import navLinks from "../../datas/navLink";
 import { RiMenu3Fill } from "react-icons/ri";
 import { MdClose } from "react-icons/md";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
@@ -22,15 +23,25 @@ const Header = () => {
         </span>
       </div>
       <nav
-        className={`links transform ${isActive ? "translate-x-0" : "translate-x-[400px] lg:translate-x-0"} transition-all duration-500 flex flex-col lg:flex-row top-[100px] lg:top-0 h-[100vh] lg:h-0 px-20 pt-20 lg:pt-0 
+        className={`links transform ${
+          isActive ? "translate-x-0" : "translate-x-[400px] lg:translate-x-0"
+        } transition-all duration-500 flex flex-col lg:flex-row top-[100px] lg:top-0 h-[100vh] lg:h-0 px-20 pt-20 lg:pt-0 
       right-0 bg-[rgba(0,0,0)] lg:bg-white items-center gap-10 xl:gap-20 absolute lg:relative`}
       >
         <ul className="links flex flex-col items-center lg:items-start lg:flex-row gap-10 lg:gap-5 ">
           {navLinks.map((link, index) => {
             return (
-              <a key={index} href={link.href} className="text-[17px] text-white lg:text-black">
+              <NavLink
+                key={index}
+                to={link.href}
+                className={({ isActive }) =>
+                  `text-[17px] ${
+                    isActive ? "text-founderPuple" : "text-white lg:text-black"
+                  } `
+                }
+              >
                 <li className="link">{link.link}</li>
-              </a>
+              </NavLink>
             );
           })}
         </ul>

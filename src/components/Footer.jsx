@@ -1,5 +1,6 @@
 import Button from "./Button";
 import navLinks from "../../datas/navLink";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -41,9 +42,17 @@ const Footer = () => {
           <ul className="links flex flex-col md:flex-row gap-7">
             {navLinks.map((link, index) => {
               return (
-                <a key={index} href={link.href} className="text-[20px] ">
-                  <li className="link">{link.link}</li>
-                </a>
+                <NavLink
+                key={index}
+                to={link.href}
+                className={({ isActive }) =>
+                  `text-[17px] ${
+                    isActive ? "text-founderPuple text-[20px]" : "text-black"
+                  } `
+                }
+              >
+                <li className="link">{link.link}</li>
+              </NavLink>
               );
             })}
           </ul>

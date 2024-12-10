@@ -28,7 +28,7 @@ const SeventhPart = () => {
           <Image width="100%" height="100%" bColor="#9524FF" />
         </div>
         <div className="img absolute top-[-180px] right-[500px] w-[50px] h-[50px] md:w-[100px] md:h-[100px] hidden xl:block">
-          <Image width="100%" height="100%" bColor="redF" />
+          <Image width="100%" height="100%" bColor="red" />
         </div>
         <div className="img absolute top-[-320px] right-[300px] w-[50px] h-[50px] md:w-[100px] md:h-[100px] hidden xl:block ">
           <Image width="100%" height="100%" bColor="#9524FF"/>

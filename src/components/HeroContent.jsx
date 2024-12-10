@@ -1,4 +1,6 @@
 import Button from "./Button"
+import { LuSquareArrowOutUpRight } from "react-icons/lu";
+
 
 const HeroContent = () => {
   return (
@@ -36,7 +38,7 @@ const HeroContent = () => {
     </div>
     <div className="hero-icons pt-[60px] flex flex-col gap-5 items-center xl:items-start">
       <span className="icons"><img src="images/Frame 18.svg" alt="" className="w-[350px]" /></span>
-      <span className="text-[12px] font-[500]">Become a collaborator today</span>
+      <span className="text-[15px] font-[500] flex gap-3 items-center">Become a collaborator today <LuSquareArrowOutUpRight /></span>
     </div>
   </div>
   )

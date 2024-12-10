@@ -3,7 +3,7 @@ import Button from "../components/Button";
 const FouthPart = () => {
   return (
     <section className="relative xl:mt-[150px] mt-[100px] px-[5%] ">
-      <img src="images/Vector 3.svg" alt="svg" className="absolute right-[10px] top-[-150px] md:hidden block" />
+      <img src="images/Vector 3.svg" alt="svg" className="absolute right-[10px] top-[-150px] hidden xl:block" />
 
       <div className="body grid grid-cols-1 xl:grid-cols-2 gap-[200px] relative ">
         <div className="content text-center xl:text-start flex flex-col items-center xl:items-start ">
